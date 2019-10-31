@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Add business</h1>
+
+        <form id="business-form">
+            <div>
+                <label for="Name">Company Name</label>
+                <input type="text" id="name" class="u-full-width" onsubmit="let business = new Business.name">
+            </div>
+            <div>
+                <label for="Price">Sale Price</label>
+                <input type="text" id="price" class="u-full-width">
+            </div>
+            <div>
+                <label for="Income">Annual Income</label>
+                <input type="text" id="annual_income" class="u-full-width">
+            </div>
+            <div>
+                <label for="Income">Annual Projection</label>
+                <input type="text" id="annual_projection" class="u-full-width">
+            </div>
+            <div>
+                <input type="submit" onSubmit="assignValues()" class="u-full-width"> 
+            </div>
+        </form>
+    
+        <table class="u-full-width">
+
+            <h3>Business Breakdown:</h3>
+            <ul class="u-full-width" id="business_data">   
+
+                <h5>Basics</h5> 
+                    <li> Business Name: <span id="business_name"></span></li>
+                    <li> Sale Price: <span id="sale_price"></span> </li>
+                    <li> Total Loan Amount: <span id="total_loan_amount"></span></li>
+                    <li> Down Payment: <span id="down_payment"></span></li>
+                    <li> Monthly Income: <span id="monthly_income"></span></li>
+                <h5>Loan Information</h5> 
+                    <li> Break Even Time (Months): <span id="break_even_time_months"></span></li>
+                    <li> Break Even Time (Years): <span id="break_even_time_years"></span></li>
+                    <li> Multiple: <span id="multiple"></span></li>
+                    <li> Cash On Cash: <span id="cash_on_cash"></span></li>
+                    <li> Monthly Debt Service: <span id="monthly_debt_service"></span></li>
+                    <li> Monthly Net Income: <span id="monthly_net_income"></span></li>
+                    <li> ANnual Net Income: <span id="annual_net_income"></span></li>
+                    <li> Debt Coverage Ratio: <span id="debt_coverage_ratio"></span></li>
+                <h5>Projections</h5>
+                    <li>Annual Income Projection: <span id="annual_income_projection"></span></li>
+                    <li>Monthly Income Projection: <span id="monthly_income_projection"></span></li>
+                    <li>Annual Income (Less Debt): <span id="annual_income_less_debt"></span></li>
+                    <li>Cash on cash Projection: <span id="cash_on_cash_projection"></span></li>
+                <h5>Exit Plan</h5> 
+                    <li>5 Year Income Estimate: <span id="five_year_income_estimate"></span></li>
+                    <li>Exit Multiple: <span id="exit_multiple"></span></li>
+                    <li>Exit Price: <span id="exit_price"></span></li>
+                    <li>Exit Take Home: <span id="exit_take_home"></span></li>
+                    <li>Total 5 Year Income: <span id="total_five_year_income"></span></li>
+                    <li>Annualized 5 Year Income: <span id="annualized_five_year_income"></span></li>
+                    <li>Money Multiplied: <span id="money_multiplied"></span> </li>
+            </ul>
+
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
